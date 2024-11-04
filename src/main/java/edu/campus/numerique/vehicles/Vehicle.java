@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Car.class, name = "car"),
         @JsonSubTypes.Type(value = Motorcycle.class, name = "motorcycle"),
-        @JsonSubTypes.Type(value = UtilityVehicle.class, name = "Utilityvehicule")
+        @JsonSubTypes.Type(value = UtilityVehicle.class, name = "Utilityvehicle")
 
 })
 public abstract class Vehicle {
@@ -43,6 +43,8 @@ public abstract class Vehicle {
     //kilometrage
     private Double mileage;
 
+    private int tax_horses;
+
    //prix au kilomètre
     private Double mileagePrice;
 
@@ -51,4 +53,5 @@ public abstract class Vehicle {
 
     // La méthode `getType` est spécifique, donc elle reste dans la classe.
     public abstract String getType();
+
 }

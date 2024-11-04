@@ -22,4 +22,5 @@ public class Motorcycle extends Vehicle {
     public String getType() {
         return "Motorcycle";
     }
+
 }
