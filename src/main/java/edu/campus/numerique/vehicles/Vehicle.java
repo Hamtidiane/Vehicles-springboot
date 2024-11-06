@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 @Data
 @Entity
 @Table(name = "vehicles")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)//toutes les classes de la hiérarchie (classe parent et classes enfants) sont stockées dans une seule table de la base de données.
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
@@ -42,6 +42,7 @@ public abstract class Vehicle {
 
     //kilometrage
     private Double mileage;
+
 
     private int tax_horses;
 
